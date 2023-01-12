@@ -32,6 +32,6 @@ def root_digit(n):
     length = len(make_num_list(n))
 
     while length > 1:
-        return r_d(s)
+        return root_digit(s)
 
     return s
