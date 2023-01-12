@@ -26,7 +26,7 @@ def make_num_list(m):
 
     return l_num
 
-def root_digit(n):
+def r_d(n):
 
     s = sum(make_num_list(n))
     length = len(make_num_list(n))
