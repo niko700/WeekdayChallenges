@@ -42,4 +42,5 @@ def r_d(n):
 
     return s
 
+
 test(587, r_d)
