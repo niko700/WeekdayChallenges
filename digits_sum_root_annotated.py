@@ -1,45 +1,45 @@
-#this fails all the tests
+#this passed the tests!!
 
 from __future__ import annotations
 from beginnercodes.challenges import test
 
-def root_digit(number: int) -> int:
-    def make_text_list(k):
 
-        a = str(k)          #converts number entered as parameter to text
+def make_text_list(k):
 
-        i = 0
-        l = []
+    a = str(k)          #converts number entered as parameter to text
 
-        for i in a:             #splits digits in input number into text digit list
-            l.append(i)
+    i = 0
+    l = []
 
-        return l
+    for i in a:             #splits digits in input number into text digit list
+        l.append(i)
 
-    def make_num_list(m):
+    return l
 
-        a = str(m)          #converts number entered as parameter to text
+def make_num_list(m):
 
-        i = 0
-        l = []
-        l_num = []
+    a = str(m)          #converts number entered as parameter to text
 
-        for i in a:             #splits digits in input number into text digit list
-            l.append(i)
+    i = 0
+    l = []
+    l_num = []
 
-        for i in l:             #converts digits in list into numbers
-            digit_as_num = l_num.append(int(i))
+    for i in a:             #splits digits in input number into text digit list
+        l.append(i)
 
-        return l_num
+    for i in l:             #converts digits in list into numbers
+        digit_as_num = l_num.append(int(i))
 
-    def r_d(n):
+    return l_num
 
-        s = sum(make_num_list(n))
-        length = len(make_num_list(n))
+def r_d(n):
 
-        while length > 1:
-            return r_d(s)
+    s = sum(make_num_list(n))
+    length = len(make_num_list(n))
 
-        return s
+    while length > 1:
+        return r_d(s)
 
-test(587, root_digit)
+    return s
+
+test(587, r_d)
